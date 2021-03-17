@@ -13,6 +13,7 @@
 		0FC4160B2601FD2700ACACEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC416092601FD2700ACACEA /* Main.storyboard */; };
 		0FC4160D2601FD2800ACACEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC4160C2601FD2800ACACEA /* Assets.xcassets */; };
 		0FC416102601FD2800ACACEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC4160E2601FD2800ACACEA /* LaunchScreen.storyboard */; };
+		BD037990FF3D86A4BD1DD209 /* Pods_Odidora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0FC4160C2601FD2800ACACEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC4160F2601FD2800ACACEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FC416112601FD2800ACACEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE2D047E8630E455061B4B0 /* Pods-Odidora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odidora.debug.xcconfig"; path = "Target Support Files/Pods-Odidora/Pods-Odidora.debug.xcconfig"; sourceTree = "<group>"; };
+		60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Odidora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BBFE71076B6B1222CE941D /* Pods-Odidora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odidora.release.xcconfig"; path = "Target Support Files/Pods-Odidora/Pods-Odidora.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD037990FF3D86A4BD1DD209 /* Pods_Odidora.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0FC416022601FD2700ACACEA /* Odidora */,
 				0FC416012601FD2700ACACEA /* Products */,
+				AE41D43F8A7471DC212B20E0 /* Pods */,
+				3E10FBB559213FACB056FFC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Odidora;
 			sourceTree = "<group>";
 		};
+		3E10FBB559213FACB056FFC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE41D43F8A7471DC212B20E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BE2D047E8630E455061B4B0 /* Pods-Odidora.debug.xcconfig */,
+				F6BBFE71076B6B1222CE941D /* Pods-Odidora.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FC416142601FD2800ACACEA /* Build configuration list for PBXNativeTarget "Odidora" */;
 			buildPhases = (
+				B407D62518CBE1592D726589 /* [CP] Check Pods Manifest.lock */,
 				0FC415FC2601FD2700ACACEA /* Sources */,
 				0FC415FD2601FD2700ACACEA /* Frameworks */,
 				0FC415FE2601FD2700ACACEA /* Resources */,
+				9AFF92C658CCD4E8DE6686D1 /* [CP] Embed Pods Frameworks */,
+				A9DF665F0E72A9BAD6C5E550 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9AFF92C658CCD4E8DE6686D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DF665F0E72A9BAD6C5E550 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Odidora/Pods-Odidora-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B407D62518CBE1592D726589 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Odidora-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FC415FC2601FD2700ACACEA /* Sources */ = {
@@ -283,11 +370,13 @@
 		};
 		0FC416152601FD2800ACACEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE2D047E8630E455061B4B0 /* Pods-Odidora.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Odidora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +390,13 @@
 		};
 		0FC416162601FD2800ACACEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6BBFE71076B6B1222CE941D /* Pods-Odidora.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Odidora/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
