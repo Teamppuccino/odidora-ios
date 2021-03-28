@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     FirebaseApp.configure()
     Messaging.messaging().delegate = self
     // 카카오 로그인
-    KakaoSDKCommon.initSDK(appKey: "NATIVE_APP_KEY")
+    KakaoSDKCommon.initSDK(appKey: "2ba6b6c53b924db53aefe6e373140ec6")
     // GoogleMap
     GMSServices.provideAPIKey("AIzaSyBbvDbBb9JCs-ybIpETo86Q6BqNjaEeTLY")
     return true

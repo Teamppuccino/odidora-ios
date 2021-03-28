@@ -12,6 +12,8 @@ import KakaoSDKUser
 
 class LoginViewController: UIViewController, MessagingDelegate {
 
+      var userModel: UserModel = UserModel(userId: "", userPw: "", userName: "", userBirth: "", socialType: "", userImg: "", userToken: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +24,9 @@ class LoginViewController: UIViewController, MessagingDelegate {
     @IBAction func didTapKakaoLogin(_ sender: UIButton) {
         kakaoLogin { [weak self] (_) in
             self?.getKakaoUserInfo()
-        } error: { (<#Error?#>) in
-            <#code#>
+            
+        } error: { (error) in
+            print(error?.localizedDescription)
         }
 
         
@@ -76,13 +79,16 @@ class LoginViewController: UIViewController, MessagingDelegate {
         }
         else {
           print("me() success.")
-          
           // 서버로 전송하게 될 유저 정보
           guard let user = user else { return }
-          _ = user.id
-          _ = user.kakaoAccount?.profile?.nickname
-          _ = user.kakaoAccount?.email
-          _ = user.kakaoAccount?.birthday
+            guard let id = user.kakaoAccount?.email,
+                  let name = user.kakaoAccount?.profile?.nickname,
+                  let birth = user.kakaoAccount?.birthday,
+                  let imgSource = user.kakaoAccount?.profile?.thumbnailImageUrl,
+                  let img = try? String(contentsOf: imgSource),
+                   let token = UserDefaults.standard.string(forKey: UserDefaultKeys.fcmToken.rawValue)
+            else { return }
+            self.userModel = UserModel(userId: id, userPw: String(Int(user.id)), userName: name, userBirth: birth, socialType: "kakao", userImg: img, userToken: token)
           
         }
       }

@@ -12,7 +12,7 @@ struct UserModel: Codable  {
     let userPw: String
     let userName: String
     let userBirth: String
-    let socialYype: String
+    let socialType: String
     let userImg: String
     let userToken: String
     
@@ -21,7 +21,7 @@ struct UserModel: Codable  {
         case userPw = "user_pw"
         case userName = "user_name"
         case userBirth = "user_birth"
-        case socialYype = "social_type"
+        case socialType = "social_type"
         case userImg = "user_img"
         case userToken = "user_token"
     }
