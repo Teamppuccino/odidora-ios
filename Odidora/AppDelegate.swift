@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import KakaoSDKCommon
 import KakaoSDKAuth
+import GoogleMaps
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     Messaging.messaging().delegate = self
     // 카카오 로그인
     KakaoSDKCommon.initSDK(appKey: "NATIVE_APP_KEY")
+    // GoogleMap
+    GMSServices.provideAPIKey("AIzaSyBbvDbBb9JCs-ybIpETo86Q6BqNjaEeTLY")
     return true
   }
   

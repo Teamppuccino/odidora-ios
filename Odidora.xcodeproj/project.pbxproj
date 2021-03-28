@@ -15,6 +15,7 @@
 		0FC416102601FD2800ACACEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FC4160E2601FD2800ACACEA /* LaunchScreen.storyboard */; };
 		A62FC92C26061F220002212B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC92B26061F220002212B /* LoginViewController.swift */; };
 		A6630E9E260F721700CCBE6D /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = A6630E9D260F721700CCBE6D /* GoogleService-Info .plist */; };
+		A6630EA1260F790600CCBE6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6630EA0260F790600CCBE6D /* HomeViewController.swift */; };
 		BD037990FF3D86A4BD1DD209 /* Pods_Odidora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Odidora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62FC92B26061F220002212B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A6630E9D260F721700CCBE6D /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
+		A6630EA0260F790600CCBE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F6BBFE71076B6B1222CE941D /* Pods-Odidora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odidora.release.xcconfig"; path = "Target Support Files/Pods-Odidora/Pods-Odidora.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				0FC416032601FD2700ACACEA /* AppDelegate.swift */,
 				0FC416052601FD2700ACACEA /* SceneDelegate.swift */,
 				0FC416072601FD2700ACACEA /* ViewController.swift */,
+				A6630EA0260F790600CCBE6D /* HomeViewController.swift */,
 				0FC416092601FD2700ACACEA /* Main.storyboard */,
 				0FC4160C2601FD2800ACACEA /* Assets.xcassets */,
 				0FC4160E2601FD2800ACACEA /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6630EA1260F790600CCBE6D /* HomeViewController.swift in Sources */,
 				A62FC92C26061F220002212B /* LoginViewController.swift in Sources */,
 				0FC416082601FD2700ACACEA /* ViewController.swift in Sources */,
 				0FC416042601FD2700ACACEA /* AppDelegate.swift in Sources */,
