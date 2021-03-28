@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F706226260C72EB0034FBA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F706225260C72EB0034FBA5 /* LoginViewController.swift */; };
 		0FC416042601FD2700ACACEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC416032601FD2700ACACEA /* AppDelegate.swift */; };
 		0FC416062601FD2700ACACEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC416052601FD2700ACACEA /* SceneDelegate.swift */; };
 		0FC416082601FD2700ACACEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC416072601FD2700ACACEA /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F706225260C72EB0034FBA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FC416002601FD2700ACACEA /* Odidora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Odidora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC416032601FD2700ACACEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FC416052601FD2700ACACEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +78,11 @@
 				0FC416032601FD2700ACACEA /* AppDelegate.swift */,
 				0FC416052601FD2700ACACEA /* SceneDelegate.swift */,
 				0FC416072601FD2700ACACEA /* ViewController.swift */,
+
 				A6630EA0260F790600CCBE6D /* HomeViewController.swift */,
+
+				0F706225260C72EB0034FBA5 /* LoginViewController.swift */,
+
 				0FC416092601FD2700ACACEA /* Main.storyboard */,
 				0FC4160C2601FD2800ACACEA /* Assets.xcassets */,
 				0FC4160E2601FD2800ACACEA /* LaunchScreen.storyboard */,
@@ -241,6 +247,9 @@
 				A6E808FA2610599B00CE8D85 /* UserDefaultsKey.swift in Sources */,
 				A6630EA1260F790600CCBE6D /* HomeViewController.swift in Sources */,
 				A62FC92C26061F220002212B /* TempController.swift in Sources */,
+
+				0F706226260C72EB0034FBA5 /* LoginViewController.swift in Sources */,
+
 				0FC416082601FD2700ACACEA /* ViewController.swift in Sources */,
 				0FC416042601FD2700ACACEA /* AppDelegate.swift in Sources */,
 				0FC416062601FD2700ACACEA /* SceneDelegate.swift in Sources */,
