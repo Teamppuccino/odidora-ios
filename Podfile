@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 
 target 'Odidora' do
+  project 'Odidora.xcodeproj'
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
