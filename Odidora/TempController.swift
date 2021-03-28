@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  TempController.swift
 //  Odidora
 //
 //  Created by 박지승 on 2021/03/20.
@@ -10,7 +10,7 @@ import Firebase
 import KakaoSDKAuth
 import KakaoSDKUser
 
-class LoginViewController: UIViewController, MessagingDelegate {
+class TempController: UIViewController, MessagingDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
