@@ -17,6 +17,7 @@
 		A62FC92C26061F220002212B /* TempController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC92B26061F220002212B /* TempController.swift */; };
 		A6630E9E260F721700CCBE6D /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = A6630E9D260F721700CCBE6D /* GoogleService-Info .plist */; };
 		A6630EA1260F790600CCBE6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6630EA0260F790600CCBE6D /* HomeViewController.swift */; };
+		A6E808FA2610599B00CE8D85 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E808F92610599B00CE8D85 /* UserDefaultsKey.swift */; };
 		BD037990FF3D86A4BD1DD209 /* Pods_Odidora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		A62FC92B26061F220002212B /* TempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempController.swift; sourceTree = "<group>"; };
 		A6630E9D260F721700CCBE6D /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		A6630EA0260F790600CCBE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A6E808D92610528F00CE8D85 /* Odidora.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Odidora.entitlements; sourceTree = "<group>"; };
+		A6E808F92610599B00CE8D85 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		F6BBFE71076B6B1222CE941D /* Pods-Odidora.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Odidora.release.xcconfig"; path = "Target Support Files/Pods-Odidora/Pods-Odidora.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +74,7 @@
 		0FC416022601FD2700ACACEA /* Odidora */ = {
 			isa = PBXGroup;
 			children = (
+				A6E808D92610528F00CE8D85 /* Odidora.entitlements */,
 				0FC416032601FD2700ACACEA /* AppDelegate.swift */,
 				0FC416052601FD2700ACACEA /* SceneDelegate.swift */,
 				0FC416072601FD2700ACACEA /* ViewController.swift */,
@@ -85,6 +89,7 @@
 				0FC416112601FD2800ACACEA /* Info.plist */,
 				A6630E9D260F721700CCBE6D /* GoogleService-Info .plist */,
 				A62FC92B26061F220002212B /* TempController.swift */,
+				A6E808F92610599B00CE8D85 /* UserDefaultsKey.swift */,
 			);
 			path = Odidora;
 			sourceTree = "<group>";
@@ -239,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
+				A6E808FA2610599B00CE8D85 /* UserDefaultsKey.swift in Sources */,
 				A6630EA1260F790600CCBE6D /* HomeViewController.swift in Sources */,
 				A62FC92C26061F220002212B /* TempController.swift in Sources */,
 
@@ -395,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Odidora/Odidora.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G63629C67V;
 				INFOPLIST_FILE = Odidora/Info.plist;
@@ -416,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Odidora/Odidora.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G63629C67V;
 				INFOPLIST_FILE = Odidora/Info.plist;
