@@ -90,4 +90,5 @@ iOSInjectionProject/
 
 .DS_Store
 Pods
-.entitlements
+
+Odidora/*.entitlements
