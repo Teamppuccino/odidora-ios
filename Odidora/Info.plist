@@ -31,10 +31,8 @@
 	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-        <string>kakao2ba6b6c53b924db53aefe6e373140ec6</string>
-        <string>kakaokompassauth</string>
-        <string>storykompassauth</string>
-        <string>kakaolink</string>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
 	</array>
