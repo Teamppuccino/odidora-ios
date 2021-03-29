@@ -83,8 +83,20 @@ class LoginViewController: UIViewController, MessagingDelegate {
             APIManager.requestSocialLogin(user: self.userModel) { (json) in
                 print(json)
             }
+            self.changeRootViewController()
         }
       }
+    }
+    
+    private func changeRootViewController() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") else { return }
+            window.rootViewController = vc
+            let sceneDelegate = windowScene.delegate as? SceneDelegate
+            sceneDelegate?.window = window
+            window.makeKeyAndVisible()
+        }
     }
     
 }
