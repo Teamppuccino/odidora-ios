@@ -79,7 +79,10 @@ class LoginViewController: UIViewController, MessagingDelegate {
             }
             
             self.userModel = UserModel(userId: id, userPw: String(Int(user.id)), userName: name, userBirth: birth, socialType: "kakao", userImg: img ?? "", userToken: token)
-          
+            
+            APIManager.requestSocialLogin(user: self.userModel) { (json) in
+                print(json)
+            }
         }
       }
     }
