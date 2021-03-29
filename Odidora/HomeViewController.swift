@@ -9,46 +9,46 @@ import UIKit
 import GoogleMaps
 
 class HomeViewController: UIViewController {
-  
-  private let locationManager =  CLLocationManager()
-  private lazy var mapView = GMSMapView(frame: self.view.frame)
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
     
-    // Do any additional setup after loading the view.
-  }
-  
-  private func setGoogleMap() {
-    mapView.delegate = self
-    mapView.settings.myLocationButton = true
-    mapView.isMyLocationEnabled = true
-    self.view.addSubview(mapView)
-  }
-  
-  private func setLocation() {
-    locationManager.delegate = self
-    locationManager.requestLocation()
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest // 위치 정확도
-    guard let coordinate = locationManager.location?.coordinate else { return }
-    let zoom: Float = 14.0
-    mapView.camera = GMSCameraPosition.camera(withLatitude: coordinate.latitude, longitude: coordinate.longitude, zoom: zoom)
-  }
+    private let locationManager =  CLLocationManager()
+    private lazy var mapView = GMSMapView(frame: self.view.frame)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setGoogleMap()
+        setLocation()
+    }
+    
+    private func setGoogleMap() {
+        mapView.delegate = self
+        mapView.settings.myLocationButton = true
+        mapView.isMyLocationEnabled = true
+        self.view.addSubview(mapView)
+    }
+    
+    private func setLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // 위치 정확도
+        let coor = locationManager.location?.coordinate
+        guard let lat = coor?.latitude,
+              let long = coor?.longitude else { return }
+        let camera = GMSCameraPosition
+            .camera(withLatitude: lat, longitude: long, zoom: 14.0)
+        mapView.camera = camera
+    }
 }
 
 extension HomeViewController: GMSMapViewDelegate, CLLocationManagerDelegate {
-  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-    switch manager.authorizationStatus {
-    case .denied: // 위치 거부
-      break
-    case .notDetermined: // 다음에 확인
-      break
-    case .authorizedAlways, .authorizedWhenInUse:
-      locationManager.requestLocation()
-    case .restricted:
-      break
-    @unknown default:
-      break
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .denied, .restricted: // 위치 거부
+            break // 알림 : 위치 거부 시 이용할 수 없습니다 -> 강제 종료
+        case .notDetermined: // 다음에 확인
+            locationManager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        @unknown default:
+            break
+        }
     }
-  }
 }
