@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
     private func setLocation() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest // 위치 정확도
+        setCamera()
+    }
+    
+    private func setCamera() {
         let coor = locationManager.location?.coordinate
         guard let lat = coor?.latitude,
               let long = coor?.longitude else { return }
@@ -47,8 +51,10 @@ extension HomeViewController: GMSMapViewDelegate, CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
+            self.setCamera()
         @unknown default:
             break
         }
     }
+    
 }
