@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 import KakaoSDKCommon
-import KakaoSDKAuth
 import GoogleMaps
 
 @main
@@ -23,14 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     // GoogleMap
     GMSServices.provideAPIKey("AIzaSyBbvDbBb9JCs-ybIpETo86Q6BqNjaEeTLY")
     return true
-  }
-  
-  func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    if AuthApi.isKakaoTalkLoginUrl(url) {
-      return AuthController.handleOpenUrl(url: url)
-    }
-    
-    return false
   }
   
   func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

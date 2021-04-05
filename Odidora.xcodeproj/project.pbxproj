@@ -37,7 +37,7 @@
 		60F9DBF141424E7AD8F1D46F /* Pods_Odidora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Odidora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62FC92B26061F220002212B /* TempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempController.swift; sourceTree = "<group>"; };
 		A6630EA0260F790600CCBE6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A6E808D92610528F00CE8D85 /* Odidora.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Odidora.entitlements; sourceTree = "<group>"; };
+		A6C0CD362610D8120056574B /* Odidora.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Odidora.entitlements; sourceTree = "<group>"; };
 		A6E808F92610599B00CE8D85 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		E7F4FEC42610577F00FCCAFE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E7F4FEC726105CF300FCCAFE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		0FC416022601FD2700ACACEA /* Odidora */ = {
 			isa = PBXGroup;
 			children = (
-				A6E808D92610528F00CE8D85 /* Odidora.entitlements */,
+				A6C0CD362610D8120056574B /* Odidora.entitlements */,
 				0FC416032601FD2700ACACEA /* AppDelegate.swift */,
 				0FC416052601FD2700ACACEA /* SceneDelegate.swift */,
 				0FC416072601FD2700ACACEA /* ViewController.swift */,

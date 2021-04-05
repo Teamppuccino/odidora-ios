@@ -24,25 +24,12 @@ class LoginViewController: UIViewController, MessagingDelegate {
     @IBAction func didTapKakaoLogin(_ sender: UIButton) {
         kakaoLogin { [weak self] (_) in
             self?.getKakaoUserInfo()
-            
         } error: { (error) in
-            print(error?.localizedDescription)
+            if let error = error {
+              print(error)
+            }
         }
-
-        
     }
-    
-//    private func registTokenToFCM() {
-//      Messaging.messaging().delegate = self
-//      kakaoLogin { (oauthToken) in
-//        //
-//      } error: { (error) in
-//        if let error = error {
-//          print(error)
-//        }
-//      }
-//
-//    }
     
     private func kakaoLogin(success: @escaping (OAuthToken?) -> Void, error: @escaping (Error?) -> Void) {
       if (UserApi.isKakaoTalkLoginAvailable()) { // 유저 폰에 카카오톡 있을 경우
@@ -75,23 +62,41 @@ class LoginViewController: UIViewController, MessagingDelegate {
     private func getKakaoUserInfo() {
       UserApi.shared.me() {(user, error) in
         if let error = error {
-          print(error)
+          print(error.localizedDescription)
         }
         else {
-          print("me() success.")
           // 서버로 전송하게 될 유저 정보
-          guard let user = user else { return }
+            guard let user = user else { return }
             guard let id = user.kakaoAccount?.email,
                   let name = user.kakaoAccount?.profile?.nickname,
                   let birth = user.kakaoAccount?.birthday,
-                  let imgSource = user.kakaoAccount?.profile?.thumbnailImageUrl,
-                  let img = try? String(contentsOf: imgSource),
-                   let token = UserDefaults.standard.string(forKey: UserDefaultKeys.fcmToken.rawValue)
+                  let token = UserDefaults.standard.string(forKey: UserDefaultKeys.fcmToken.rawValue)
             else { return }
-            self.userModel = UserModel(userId: id, userPw: String(Int(user.id)), userName: name, userBirth: birth, socialType: "kakao", userImg: img, userToken: token)
-          
+            
+            var img: String?
+            if let imgurl = user.kakaoAccount?.profile?.thumbnailImageUrl  {
+                img = try? String(contentsOf: imgurl)
+            }
+            
+            self.userModel = UserModel(userId: id, userPw: String(Int(user.id)), userName: name, userBirth: birth, socialType: "kakao", userImg: img ?? "", userToken: token)
+            
+            APIManager.requestSocialLogin(user: self.userModel) { (json) in
+                print(json)
+            }
+            self.changeRootViewController()
         }
       }
+    }
+    
+    private func changeRootViewController() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            guard let vc = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") else { return }
+            window.rootViewController = vc
+            let sceneDelegate = windowScene.delegate as? SceneDelegate
+            sceneDelegate?.window = window
+            window.makeKeyAndVisible()
+        }
     }
     
 }
