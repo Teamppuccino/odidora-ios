@@ -26,3 +26,9 @@ struct UserModel: Codable  {
         case userToken = "user_token"
     }
 }
+
+struct SocialLoginResponse: Codable {
+    let code: Int
+    let message: String
+    let data: UserModel
+}
